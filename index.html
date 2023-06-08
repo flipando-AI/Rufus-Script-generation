@@ -2,19 +2,26 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - Brief Generation</title>
+  <title>CodePen - SCRIPT GENERATOR</title>
   <link rel="stylesheet" href="./style.css">
 
 </head>
 <body>
 <!-- partial:index.partial.html -->
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Brief Generation</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>CodePen</title>
-  
-
 </head>
 <body>
 <!-- partial:index.partial.html -->
@@ -56,7 +63,7 @@
       justify-content: center;
       align-items: center;
       margin-top: 50px;
-         column-gap: 2rem;
+      column-gap: 2rem;
     }
 
     .prompt {
@@ -99,7 +106,7 @@
 <body>
   <div class="app-header">
     <h1>Brief Generation</h1>
-    <h3>Solo dame algunos detalles sobre la campaña y te entregaré un brief creativo de que seguramente te impresionará 🚀  </h3>
+    <h3>Solo dame algunos detalles sobre la campaña y te entregaré un brief creativo de que seguramente te impresionará 🚀</h3>
     <div class="app-tags">
       <span class="tag">⭐ Creativity</span>
       <span class="tag">🌐 Social Media</span>
@@ -125,26 +132,62 @@
       <h1>Edit tags</h1>
       <form id="inputForm">
         <div class="form-group">
-          <label for="input1">Producto: </label>
+          <label for="input1">Marca: </label>
           <input type="text" id="input1" name="input1" />
           <div class="hint-box"></div>
         </div>
 
         <div class="form-group">
           <label for="input2">Plataforma:</label>
-          <input type="text" id="input2" name="input2"  />
+          <input type="text" id="input2" name="input2" />
           <div class="hint-box"></div>
         </div>
 
         <div class="form-group">
-            <label for="input3">Público Objetivo: </label>
-          <input type="text" id="input3" name="input3"  />
+          <label for="input3">Público Objetivo: </label>
+          <input type="text" id="input3" name="input3" />
           <div class="hint-box"></div>
         </div>
 
         <div class="form-group">
           <label for="input4">Objetivo de la campaña: </label>
-          <input type="text" id="input4" name="input4"/>
+          <input type="text" id="input4" name="input4" />
+          <div class="hint-box"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="input5">Tiempo: </label>
+          <input type="text" id="input5" name="input5" />
+          <div class="hint-box"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="input6">Referencias de diseño general a considerar: </label>
+          <input type="text" id="input6" name="input6" />
+          <div class="hint-box"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="input7">Cantidad de escenas: </label>
+          <input type="text" id="input7" name="input7" />
+          <div class="hint-box"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="input8">Pequeña narracion de lo que queremos que cuente el script: </label>
+          <input type="text" id="input8" name="input8" />
+          <div class="hint-box"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="input9">Slogan o frase que queremos que aparezca: </label>
+          <input type="text" id="input9" name="input9" />
+          <div class="hint-box"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="input10">Metodologia a utilizar: </label>
+          <input type="text" id="input10" name="input10" />
           <div class="hint-box"></div>
         </div>
 
@@ -164,10 +207,15 @@
     const input2 = document.getElementById("input2");
     const input3 = document.getElementById("input3");
     const input4 = document.getElementById("input4");
-
+    const input5 = document.getElementById("input5");
+    const input6 = document.getElementById("input6");
+    const input7 = document.getElementById("input7");
+    const input8 = document.getElementById("input8");
+    const input9 = document.getElementById("input9");
+    const input10 = document.getElementById("input10");
 
     // Manejar el evento de envío del formulario
-    inputForm.addEventListener("submit", function(event) {
+    inputForm.addEventListener("submit", function (event) {
       event.preventDefault();
 
       // Obtener los valores de los campos de entrada
@@ -175,11 +223,26 @@
       const value2 = input2.value;
       const value3 = input3.value;
       const value4 = input4.value;
-
+      const value5 = input5.value;
+      const value6 = input6.value;
+      const value7 = input7.value;
+      const value8 = input8.value;
+      const value9 = input9.value;
+      const value10 = input10.value;
 
       // Construir el prompt con los valores ingresados
-      const promptText = `Craft a creative brief for an influencer campaign promoting ${input1} on ${input2}, targeting ${input3}, with the goal of ${input4}. 
-Do it in Argentinean Spanish `;
+      const promptText = `Craft a creative brief for an influencer campaign promoting ${value1} on ${value2}, targeting ${value3}, with the goal of ${value4}.
+Do it in Argentinean Spanish. Es importante que sea todo lo necesario para el trabajo de posproducción por lo que debe estar el guion y guías visuales para que sea todo como se lo imagina el creativo.
+A su vez estos son los elementos importantes de los creativos para compartir:
+- El tiempo del guión debe ser de: ${value5}. Detalla el guión en función del tiempo.
+- Referencias de diseño general a considerar: ${value6}
+- Cantidad de escenas: ${value7}
+- Pequeña narración de lo que queremos que cuente el script: ${value8}
+- Slogan o frase que queremos que aparezca: ${value9}
+- Metodología a utilizar: ${value10}
+Recuerda que es importante que esté todo detallado para colaborar con la posproducción.
+Asegurate que el tiempo de las escenas sumadas no supere los ${value5}. La cantidad de escenas debe ser ${value7}.
+Todo en español argentino. Considerar que la metodología es ${value10}`;
 
       // Actualizar el texto del prompt en el HTML
       document.getElementById("promptText").textContent = promptText;
@@ -198,7 +261,12 @@ Do it in Argentinean Spanish `;
 </body>
 </html>
 <!-- partial -->
-  
+
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
 </body>
 </html>
 <!-- partial -->
