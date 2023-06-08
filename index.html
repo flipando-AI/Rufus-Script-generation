@@ -12,7 +12,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - Brief Generation</title>
+  <title>CodePen - Script Generation</title>
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
@@ -28,7 +28,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Brief Generator </title>
+  <title>Script Generator </title>
   <style>
     .app-header {
       text-align: center;
@@ -105,8 +105,8 @@
 </head>
 <body>
   <div class="app-header">
-    <h1>Brief Generation</h1>
-    <h3>Solo dame algunos detalles sobre la campaña y te entregaré un brief creativo de que seguramente te impresionará 🚀</h3>
+    <h1>Script Generator</h1>
+    <h3>Solo dame algunos detalles sobre la campaña y te entregaré un script creativo de que seguramente te impresionará 🚀</h3>
     <div class="app-tags">
       <span class="tag">⭐ Creativity</span>
       <span class="tag">🌐 Social Media</span>
@@ -231,18 +231,18 @@
       const value10 = input10.value;
 
       // Construir el prompt con los valores ingresados
-      const promptText = `Craft a creative brief for an influencer campaign promoting ${value1} on ${value2}, targeting ${value3}, with the goal of ${value4}.
+      const promptText = `Craft a creative SCRIPT for an influencer campaign promoting ${input1} on ${input2}, targeting personas de ${input3}, with the goal of ${input4}.
 Do it in Argentinean Spanish. Es importante que sea todo lo necesario para el trabajo de posproducción por lo que debe estar el guion y guías visuales para que sea todo como se lo imagina el creativo.
 A su vez estos son los elementos importantes de los creativos para compartir:
-- El tiempo del guión debe ser de: ${value5}. Detalla el guión en función del tiempo.
-- Referencias de diseño general a considerar: ${value6}
-- Cantidad de escenas: ${value7}
-- Pequeña narración de lo que queremos que cuente el script: ${value8}
-- Slogan o frase que queremos que aparezca: ${value9}
-- Metodología a utilizar: ${value10}
+- El tiempo del guión debe ser de: ${input5}. Detalla el guión en función del tiempo.
+- Referencias de diseño: ${input6}
+- Slogan o frase a considerar: ${input9}
+- Cantidad de escenas: ${input7}
+- Narrativa del equipo creativo: ${input9}
+- Frases textuales en el audio o texto: ${input8}
 Recuerda que es importante que esté todo detallado para colaborar con la posproducción.
-Asegurate que el tiempo de las escenas sumadas no supere los ${value5}. La cantidad de escenas debe ser ${value7}.
-Todo en español argentino. Considerar que la metodología es ${value10}`;
+Asegurate que el tiempo de las escenas sumadas no supere los ${input5}. La cantidad de escenas debe ser ${input7}.
+Todo en español argentino. Considerar que la metodología es ${input10}`;
 
       // Actualizar el texto del prompt en el HTML
       document.getElementById("promptText").textContent = promptText;
